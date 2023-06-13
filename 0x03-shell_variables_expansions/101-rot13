@@ -1,2 +1,2 @@
 #!/bin/bash
-cat quote | awk '{print}' ORS=' ' | awk '{ for(i=1;i<=NF;i++){if(($i>=65 && $i<=90)||($i>=97 && $i<=122)){$i+=13;if(($i>90 && $i<104)||($i>122)){$i-=26}};printf("%c",$i)}}'
+cut -f 1 paste - - | cut -d$'\t' -fi1
